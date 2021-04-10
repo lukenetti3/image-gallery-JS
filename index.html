@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="hero-background">
+        <div class="hero-container">
+          <h1>Image Gallery App</h1>
+          <p>Welcome to the image gallery. Select a category.</p>
+        </div>
+      </div>
+
+      <!-- Modal Feature -->
+      <div id="modal">
+        <span class="close" onclick="closeModal()">X</span>
+        <!-- <div class="user-content">
+          <p>{`Created by: ${photo.user.name}`}</p>
+        </div> -->
+        <!-- <img className="{" photo.width /> photo.height ? "modal-landscape" :
+        "modal-portrait" } src={photo.urls.full} alt={photos.alt_description} /> -->
+      </div>
+      <!-- End Modal Feature -->
+
+      <div class="container">
+        <button class="category-selectors" onclick="setCategory('dogs',1)">
+          Dogs
+        </button>
+        <button class="category-selectors" onclick="setCategory('nature',1)">
+          Nature
+        </button>
+        <button class="category-selectors" onclick="setCategory('cars',1)">
+          Cars
+        </button>
+        <br />
+
+        <button onclick="changeView()">List View</button>
+      </div>
+    </div>
+    <div id="image-container" class="grid-container"></div>
+
+    <script src="myscript.js"></script>
+  </body>
+</html>

@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Lobster;
+  font-size: 4rem;
+  margin: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.grid-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+}
+
+.grid-container > div > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grid-container > div > img:hover {
+  cursor: pointer;
+}
+
+.landscape {
+  grid-column: span 2.5;
+}
+
+.portrait {
+  grid-row: span 2;
+}
+
+.list-container {
+  display: block;
+  text-align: center;
+}
+
+.list-container > div > img {
+  width: 60%;
+}
+
+.list-conatiner > div > img:hover {
+  cursor: pointer;
+}
+
+#modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-landscape {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.modal-portrait {
+  margin: auto;
+  display: block;
+  height: 80%;
+  max-height: 600px;
+}
+
+.user-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.user-content > p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.close {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  color: white;
+}
+
+.close:hover {
+  cursor: pointer;
+}
+
+button {
+  font-size: 1rem;
+  color: white;
+  padding: 0.8rem 1.8rem;
+  border-radius: 40px;
+  background: transparent;
+  border: 2px solid white;
+  margin-bottom: 30px;
+}
+
+button:hover {
+  background-color: #f1a793;
+  border: 2px solid #f1a793;
+  cursor: pointer;
+}
+
+.hero-background {
+  background: url("./images/hero-image.jpg") no-repeat center center;
+  height: 600px;
+  background-size: cover;
+  margin-bottom: -300px;
+}
+
+.hero-container {
+  display: flex;
+  width: 600px;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 100px;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.category-selectors {
+  margin: 0 1rem 2rem 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .hero-container {
+    width: 92%;
+    padding-top: 0;
+  }
+}
