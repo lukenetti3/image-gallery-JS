@@ -13,4 +13,4 @@ If you click the toggle view button you can toggle between a grid view and list 
 
 Click on any image and see a modal popup of this image.
 
-![website image](/src/images/websiteImg.png)
+![website image](./images/websiteImg.png)
