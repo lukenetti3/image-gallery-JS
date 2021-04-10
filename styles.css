@@ -62,10 +62,10 @@ h3 {
 }
 
 .list-container > div > img {
-  width: 60%;
+  width: 40%;
 }
 
-.list-conatiner > div > img:hover {
+.list-container > div > img:hover {
   cursor: pointer;
 }
 
@@ -165,5 +165,8 @@ button:hover {
   .hero-container {
     width: 92%;
     padding-top: 0;
+  }
+  .list-container > div > img {
+    width: 70%;
   }
 }

@@ -19,36 +19,41 @@ async function getData(category, pageCnt) {
   if (response.ok) {
     const images = await response.json()
     images.results.map((url) => {
+      // Create layout structure for image gallery
       let divEl = document.createElement("div")
       let imgEl = document.createElement("img")
+      imgEl.src = url.urls.regular
+      imageContainer.appendChild(divEl)
+      divEl.appendChild(imgEl)
+
+      // Assign attributes and add event listener
       imgEl.setAttribute("id", "img-id")
       imgEl.addEventListener("click", () =>
         openModal(event, url.height, url.width)
       )
-      imgEl.src = url.urls.regular
       if (url.width > url.height) {
         divEl.classList.add("landscape")
       } else {
         divEl.classList.add("portrait")
       }
-      imageContainer.appendChild(divEl)
-      divEl.appendChild(imgEl)
     })
   }
 }
 
 function openModal(event, height, width) {
+  // Create elements for modal
   const modal = document.getElementById("modal")
   modal.style.display = "block"
   imageEl = document.createElement("img")
   modal.appendChild(imageEl)
+  imageEl.src = event.target.src
+
   imageEl.setAttribute("id", "modal-img")
   if (width > height) {
     imageEl.setAttribute("class", "modal-landscape")
   } else {
     imageEl.setAttribute("class", "modal-portrait")
   }
-  imageEl.src = event.target.src
 }
 
 function closeModal() {
